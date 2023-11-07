@@ -2,6 +2,7 @@ import { PostInterface } from "@/libs/types"
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
 import Link from "next/link"
+import Image from "next/image"
 
 const SERVER_URL = 'http://127.0.0.1:8000'
 
@@ -24,7 +25,8 @@ export default async function Detail({ params }: { params: { id: string } }) {
                 <div className="w-6/12 border rounded-lg shadow-lg flex flex-col px-8 py-4">
                     <h1 className="border-b border-b-slate-300 text-2xl mb-4">{ post.title }</h1>
                     <p>{ post.content }</p>
-                    <Link href='/' className="hover:text-blue-800 hover:underline mt-4">投稿一覧に戻る</Link>
+                    <p className="mt-2">自信: {post.skill_level}/5</p>
+                    <Link href='/' className="hover:text-blue-900 hover:underline mt-1 text-blue-700">投稿一覧に戻る</Link>
                 </div>
             </div>
             <Footer />

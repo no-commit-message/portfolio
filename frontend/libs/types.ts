@@ -3,4 +3,6 @@ export interface PostInterface {
     title: string;
     content: string;
     created_at: string;
+    skill_level: number;
+    image: string;
 }
